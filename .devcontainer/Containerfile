@@ -1,0 +1,11 @@
+FROM docker.io/debian:trixie-20251020
+
+ENV ANDROID_HOME="/opt/android-sdk"
+
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
+  nodejs \
+  npm \
+  android-sdk \
+  sdkmanager
+
+STOPSIGNAL SIGKILL

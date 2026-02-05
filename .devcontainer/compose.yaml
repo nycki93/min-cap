@@ -1,0 +1,19 @@
+version: "3"
+
+x-podman:
+  in_pod: false
+
+services:
+  devcontainer:
+    build:
+      containerfile: "./Containerfile"
+    environment:
+      - "DISPLAY"
+    network_mode: "host"
+    tty: true
+    userns_mode: "host"
+    volumes:
+      - "../.cache/gradle:/root/.gradle"
+      - "../.cache/licenses:/opt/android-sdk/licenses"
+      - "../app:/app:Z"
+    working_dir: "/app"

@@ -1,0 +1,19 @@
+{
+  "name": "min-cap",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "build": "mkdir -p dest && cp src/* dest/",
+    "serve": "serve dest"
+  },
+  "dependencies": {
+    "serve": "^14.2.5"
+  }
+}
