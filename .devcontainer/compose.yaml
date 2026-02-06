@@ -17,6 +17,7 @@ services:
       - "../.cache/licenses:/opt/android-sdk/licenses"
       - "../src:/opt/app/src:Z"
       - "../node_modules:/opt/app/node_modules:Z"
+      - "../package.json:/opt/app/package.json:Z"
       - "../.env:/opt/app/.env:Z"
       - "../capacitor.config.ts:/opt/app/capacitor.config.ts:Z"
       - "../out:/opt/app/out"

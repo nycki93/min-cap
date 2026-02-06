@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'min-cap',
   webDir: 'out/app',
   android: {
-    path: 'src/android/capacitor',
+    path: 'out/android/capacitor',
   },
 };
 
