@@ -15,5 +15,9 @@ services:
     volumes:
       - "../.cache/gradle:/root/.gradle"
       - "../.cache/licenses:/opt/android-sdk/licenses"
-      - "../app:/app:Z"
-    working_dir: "/app"
+      - "../src:/opt/app/src:Z"
+      - "../node_modules:/opt/app/node_modules:Z"
+      - "../.env:/opt/app/.env:Z"
+      - "../capacitor.config.ts:/opt/app/capacitor.config.ts:Z"
+      - "../out:/opt/app/out"
+    working_dir: "/opt/app"
