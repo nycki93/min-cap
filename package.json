@@ -3,6 +3,7 @@
   "name": "min-cap",
   "module": "index.ts",
   "type": "module",
+  "main": "src/electron/main.js",
   "private": true,
   "devDependencies": {
     "@capacitor/android": "^7.4.4",
@@ -11,6 +12,7 @@
     "@types/bun": "latest",
     "dotenv": "^17.2.4",
     "electron": "^40.1.0",
+    "electron-builder": "^26.7.0",
     "serve": "^14.2.5"
   },
   "peerDependencies": {
@@ -19,7 +21,8 @@
   "scripts": {
     "build": "mkdir -p out && cp -r src/app out/app",
     "serve": "serve out/app",
-    "electron-run": "electron src/electron/main.js",
+    "electron-run": "electron src/electron/index.js",
+    "electron-build": "electron-builder build",
     "devcontainer": "podman-compose -f \"$PWD/.devcontainer/compose.yaml\" run --rm --build devcontainer bash",
     "android-setup": "podman-compose -f \"$PWD/.devcontainer/compose.yaml\" run --rm --build devcontainer node src/android/setup.js",
     "android-build": "podman-compose -f \"$PWD/.devcontainer/compose.yaml\" run --rm --build devcontainer node src/android/build.js"
