@@ -19,9 +19,9 @@
     "typescript": "^5"
   },
   "scripts": {
-    "build": "mkdir -p out && cp -r src/app out/app",
+    "build": "mkdir -p out && cp -r src/app out/",
     "serve": "serve out/app",
-    "electron-run": "electron src/electron/index.js",
+    "electron-run": "electron src/electron/main.js",
     "electron-build": "electron-builder build",
     "devcontainer": "podman-compose -f \"$PWD/.devcontainer/compose.yaml\" run --rm --build devcontainer bash",
     "android-setup": "podman-compose -f \"$PWD/.devcontainer/compose.yaml\" run --rm --build devcontainer node src/android/setup.js",
