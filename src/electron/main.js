@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 let mainWindow;
 function initWindow() {
   mainWindow = new BrowserWindow({
-    width: 640,
-    height: 480,
+    width: 360,
+    height: 640,
   });
   mainWindow.loadFile(path.join(__dirname, '../../out/app/index.html'));
 }
