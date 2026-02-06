@@ -10,10 +10,12 @@
     "typescript": "^5"
   },
   "scripts": {
-    "build": "mkdir -p dest && cp src/* dest/",
-    "serve": "serve dest"
+    "build": "mkdir -p out && cp -r src/app out/app",
+    "serve": "serve out/app",
+    "electron": "electron src/electron/main.js"
   },
   "dependencies": {
+    "electron": "^40.1.0",
     "serve": "^14.2.5"
   }
 }
