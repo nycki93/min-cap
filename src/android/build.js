@@ -4,6 +4,7 @@ import path from 'path';
 
 dotenv.config();
 try {
+  execSync(`node_modules/.bin/cap sync`);
   execSync(`node_modules/.bin/cap build android \
     --androidreleasetype    APK \
     --keystorepath          ../../../out/android/my.keystore \
