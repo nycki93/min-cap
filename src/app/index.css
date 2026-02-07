@@ -1,5 +1,18 @@
+:root {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
-  margin: 0 auto;
-  background-color: beige;
+  margin: env(safe-area-inset-top) auto env(safe-area-inset-bottom);
+  width: 100%;
+  flex: 1;
+  background-color: tan;
   text-align: center;
+}
+
+:first-child {
+  margin-top: 0;
 }
